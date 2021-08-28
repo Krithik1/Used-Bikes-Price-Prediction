@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKE RENTAL PRICE PREDICTION</title>
+</head>
+<body>
+    <div class = "login">
+        <h1>PREDICT PRICE OF USED BIKES</h1>
+        <h3>Enter the following values to predict the prices of the bikes</h3>
+        <form action = "{{ url_for('predict')}}"method = "post">
+            <input type = "text" name = "kmsdriven" placeholder="KMS DRIVEN" required="required" />
+            <input type = "text" name = "age" placeholder="AGE" required="required" />
+            <input type = "text" name = "power" placeholder="POWER" required="required" />
+            <input type = "text" name = "city" placeholder="CITY" required="required" />
+            <input type = "text" name = "owner" placeholder="OWNER" required="required" />
+            <input type = "text" name = "brand" placeholder="BRAND" required="required" />
+
+            <button type = "submit" class = "btn">PREDICT</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
